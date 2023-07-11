@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    background-color: bisque;
+}
+
+.ulProductos a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.ulProductos a:hover {
+    color: brown;
+}
+
+.ulProductos {
+    list-style-type: none;
+    margin: auto;
+}
+
+.ulCarrito{
+    margin: 0 !important;
+    padding-right: 20px;
+    list-style: none;
+}
+
+.ulHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.img--inicio {
+    text-align: center;
+}
+
+.navbar-collapse ul{
+    margin: auto;
+}
+
+#btnCarrito, #btnBuscar{
+    background: #fcb6818c;
+    border-color: #12121275;
+}
+
+#btnCarrito:hover, #btnBuscar:hover{
+    background: #FCB681;
+    border-color: #121212;
+}
+
+#btnCarrito i{
+    color: #121212;
+}
+
+#btnGuardarPostre, #verProductos, #ocultarProductos, .btnCerrar{
+    background-color: #fcb681ad;
+    border-color: #FCB681;
+}
+
+#btnGuardarPostre:hover, #verProductos:hover, #ocultarProductos:hover, .btnCerrar:hover{
+    background-color: bisque;
+    border-color: #fcb681ad;
+}
+
+.btnAgregar, #botonFinalizarCompra{
+    background-color: #FCB681;
+    border-color: #12121275;
+}
+
+.btnAgregar:hover, #botonFinalizarCompra:hover{
+    background-color: bisque;
+    border-color: #FCB681;
+}
+
+/* FOOTER */
+footer{
+    background-color: #FCB681;
+}
+
+footer p {
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    color: black;
+    margin-bottom: 0;
+}
