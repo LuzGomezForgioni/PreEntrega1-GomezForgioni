@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 
-*{
+* {
     margin: 0;
     border: 0;
     box-sizing: border-box;
@@ -27,13 +27,13 @@
     margin: auto;
 }
 
-.ulCarrito{
+.ulCarrito {
     margin: 0 !important;
     padding-right: 20px;
     list-style: none;
 }
 
-.ulHeader{
+.ulHeader {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -41,48 +41,103 @@
 
 .img--inicio {
     text-align: center;
+    height: 100vh;
 }
 
-.navbar-collapse ul{
+.navbar-collapse ul {
     margin: auto;
 }
 
-#btnCarrito, #btnBuscar{
+#btnCarrito,
+#btnBuscar {
     background: #fcb6818c;
     border-color: #12121275;
 }
 
-#btnCarrito:hover, #btnBuscar:hover{
+#btnCarrito:hover,
+#btnBuscar:hover {
     background: #FCB681;
     border-color: #121212;
 }
 
-#btnCarrito i{
+#btnCarrito i {
     color: #121212;
 }
 
-#btnGuardarPostre, #verProductos, #ocultarProductos, .btnCerrar{
+#btnGuardarPostre,
+#verProductos,
+#ocultarProductos,
+.btnCerrar {
     background-color: #fcb681ad;
     border-color: #FCB681;
 }
 
-#btnGuardarPostre:hover, #verProductos:hover, #ocultarProductos:hover, .btnCerrar:hover{
+#btnGuardarPostre:hover,
+#verProductos:hover,
+#ocultarProductos:hover,
+.btnCerrar:hover {
     background-color: bisque;
     border-color: #fcb681ad;
 }
 
-.btnAgregar, #botonFinalizarCompra{
+.btnAgregar,
+#botonFinalizarCompra {
     background-color: #FCB681;
     border-color: #12121275;
 }
 
-.btnAgregar:hover, #botonFinalizarCompra:hover{
+.btnAgregar:hover,
+#botonFinalizarCompra:hover {
     background-color: bisque;
     border-color: #FCB681;
 }
 
+.btnMyO{
+    padding: 40px 0;
+}
+
+.btnMyO .row{
+    justify-content: center;
+}
+
+.btnMyO .row .col-3{
+    text-align: center;
+}
+
+#productos{
+    background-color: bisque;
+    height: 80px;
+    border-radius: 10px;
+    border: #fcb681ad 1px solid;
+    width: 60vw;
+    margin: auto;
+}
+
+.section--form{
+    margin-bottom: 80px;
+}
+
+.section--form form{
+    margin: auto;
+}
+
+.modal-body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.modal-body div{
+    margin-bottom: 20px;
+}
+
+#precioFinal{
+    text-align: center;
+    font-size: 20px;
+}
+
+
 /* FOOTER */
-footer{
+footer {
     background-color: #FCB681;
 }
 
@@ -92,4 +147,10 @@ footer p {
     padding: 10px;
     color: black;
     margin-bottom: 0;
+}
+
+@media only screen and (min-width: 950px) and (max-width: 1330px) {
+    .img--inicio img {
+        width: 100vw;
+    }
 }

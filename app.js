@@ -14,12 +14,19 @@ class Postre {
     }
 }
 
-const postre1 = new Postre(1, "Pavlova", 3500, "pavlova.png");
-const postre2 = new Postre(2, "Lemon Pie", 3000, "lemonPie.png");
+const postre1 = new Postre(1, "Pavlova", 4000, "pavlova.png");
+const postre2 = new Postre(2, "Lemon Pie", 3400, "lemonPie.png");
 const postre3 = new Postre(3, "Chocotorta", 2800, "chocotorta.png");
-const postre4 = new Postre(4, "Marquise", 3000, "marquise.png");
+const postre4 = new Postre(4, "Marquise", 3300, "marquise.png");
 const postre5 = new Postre(5, "Cheesecake de Oreo", 3700, "cheesecakeOreo.png");
-const postre6 = new Postre(6, "Rogel", 4000, "rogel.png");
+const postre6 = new Postre(6, "Rogel", 4500, "rogel.png");
+
+const postre7 = new Postre(7, "Tarta de Coco", 3500, "tartaCoco.png");
+const postre8 = new Postre(8, "Selva Negra", 2900, "selvaNegra.png");
+const postre9 = new Postre(9, "Tarta Frutal", 3200, "tartaFrutal.png");
+const postre10 = new Postre(10, "Chajá", 3000, "chaja.png");
+const postre11 = new Postre(11, "Cheesecake de Frutillas", 3700, "cheesecakeFrutillas.png");
+const postre12 = new Postre(12, "Brownie", 3600, "brownie.png");
 
 let mostrador = [];
 
@@ -28,7 +35,7 @@ let mostrador = [];
 if (localStorage.getItem("mostrador")) {
     mostrador = JSON.parse(localStorage.getItem("mostrador"));
 } else {
-    mostrador = [...mostrador, postre1, postre2, postre3, postre4, postre5, postre6];
+    mostrador = [...mostrador, postre1, postre2, postre3, postre4, postre5, postre6, postre7, postre8, postre9, postre10, postre11, postre12];
     localStorage.setItem("mostrador", JSON.stringify(mostrador));
 }
 
@@ -65,10 +72,10 @@ function mostrarPostres(array) {
     for (let postre of array) {
         let divPostreNuevo = document.createElement("div")
 
-        divPostreNuevo.className = "col-12 col-md-6 col-lg-4 my-2"
+        divPostreNuevo.className = "col-12 col-md-4 col-lg-3 my-2"
         divPostreNuevo.innerHTML = `
-        <div id="${postre.id}" class="card" style="width: 18rem;">
-            <img class="card-img-top img-fluid" style="height: 200px;"src="img/${postre.imagen}" alt="${postre.nombre}">
+        <div id="${postre.id}" class="card" style="width: 15rem;">
+            <img class="card-img-top img-fluid" style="height: ; "src="img/${postre.imagen}" alt="${postre.nombre}">
             <div class="card-body">
                 <h4 class="card-title">${postre.nombre}</h4>
                 <p class="card-text">$${postre.precio}</p> 
@@ -99,13 +106,15 @@ function cargarProductosCarrito(array) {
     modalBodyCarrito.innerHTML = ``
     array.forEach((productoCarrito) => {
         modalBodyCarrito.innerHTML += `
-        <div class="card border-primary mb-3" id ="productoCarrito${productoCarrito.id}" style="max-width: 540px;">
-            <img class="card-img-top" height="300px" src="img/${productoCarrito.imagen}" alt="">
-            <div class="card-body">
-                <h4 class="card-title">${productoCarrito.nombre}</h4>
-                <p class="card-text">$${productoCarrito.precio}</p> 
-                <button class= "btn btn-danger" id="botonEliminar${productoCarrito.id}"><i class="fas fa-trash-alt"></i></button>
-            </div>    
+        <div>
+            <div class="card border-primary" id ="productoCarrito${productoCarrito.id}" style="width: 13rem;">
+                <img class="card-img-top" height="" src="img/${productoCarrito.imagen}" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">${productoCarrito.nombre}</h4>
+                    <p class="card-text">$${productoCarrito.precio}</p> 
+                    <button class= "btn btn-danger" id="botonEliminar${productoCarrito.id}"><i class="fas fa-trash-alt"></i></button>
+                </div>    
+            </div>
         </div>`
     })
     calcularTotal(array)
@@ -169,7 +178,6 @@ function buscarPostres(buscado, array) {
         (coincidencia.innerHTML = "", mostrarPostres(busqueda))
 }
 
-//EVENTOS:
 btnAgregarPostre.addEventListener("click", function (event) {
     event.preventDefault()
     agregarPostre(mostrador)

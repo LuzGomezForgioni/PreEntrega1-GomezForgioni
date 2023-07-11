@@ -49,21 +49,23 @@
         </div>
 
         <!--FORM AGREGAR POSTRE-->
-        <form id="formAgregarCarrito" class="col-lg-6 m-5">
-            <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre Postre</label>
-                <input type="text" class="form-control" id="nombreInput" aria-describedby="nombre">
-            </div>
+        <section class="section--form">
+            <form id="formAgregarCarrito" class="col-4">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre Postre</label>
+                    <input type="text" class="form-control" id="nombreInput" aria-describedby="nombre">
+                </div>
 
-            <div class="mb-3">
-                <label for="precio" class="form-label">Precio:</label>
-                <input type="text" class="form-control" id="precioInput" aria-describedby="precio">
-            </div>
+                <div class="mb-3">
+                    <label for="precio" class="form-label">Precio:</label>
+                    <input type="text" class="form-control" id="precioInput" aria-describedby="precio">
+                </div>
 
-            <div>
-                <button type="text" id="btnGuardarPostre" class="btn">Guardar Postre</button>
-            </div>
-        </form>
+                <div>
+                    <button type="text" id="btnGuardarPostre" class="btn">Guardar Postre</button>
+                </div>
+            </form>
+        </section>
 
         <!-- BUSCAR Y ORDENAR -->
         <nav id="productos" class="navbar navbar-expand-lg">
@@ -85,13 +87,15 @@
             </div>
         </nav>
 
-        <div class="row">
-            <div class="m-5 col-lg-3">
-                <button id="verProductos" class="btn">Mostrar Postres</button>
-            </div>
+        <div class="container btnMyO">
+            <div class="row">
+                <div class="col-3">
+                    <button id="verProductos" class="btn">Mostrar Postres</button>
+                </div>
 
-            <div class="m-5 col-lg-3">
-                <button id="ocultarProductos" class="btn">Ocultar Postres</button>
+                <div class="col-3">
+                    <button id="ocultarProductos" class="btn">Ocultar Postres</button>
+                </div>
             </div>
         </div>
     </main>
@@ -102,7 +106,7 @@
         <div id="postres" class="row"></div>
     </div>
 
-    <!--Modal Carrito-->
+    <!--Modal-->
     <div class="modal fade" id="idModalCarrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -116,8 +120,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btnCerrar" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" data-bs-dismiss="modal" class="btn" id="botonFinalizarCompra">Finalizar
-                        Compra</button>
+                    <button type="button" data-bs-dismiss="modal" class="btn" id="botonFinalizarCompra">Finalizar Compra</button>
                 </div>
             </div>
         </div>
